@@ -1,62 +1,64 @@
 import React from 'react'
 import axios from 'axios'
 import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import { useState } from 'react';
+
+
 
 
 const Axios = () => {
+
     
 
-  const getHandle=()=>{
-    axios.get("http://jsonplaceholder.typicode.com/todos")
-    .then(res=>console.log(res.data))
-    .catch(err=>console.error(err))
-  }
-  const postHandle=()=>{
-    axios
-      .post("http://jsonplaceholder.typicode.com/todos", { title: "sagar" })
-      .then((res) => console.log(res.data))
-      .catch((err) => console.error(err)); 
-  }
-  const putHandle=()=>{
-    axios
-      .put("http://jsonplaceholder.typicode.com/todos/1", {
-        title: "sachin",
-      })
-      .then((res) => console.log(res.data))
-      .catch((err) => console.error(err)); 
-  }
-  const patchHandle=()=>{
-    axios
-      .patch("http://jsonplaceholder.typicode.com/todos/1", {
-        title: "sushant",
-      })
-      .then((res) => console.log(res.data))
-      .catch((err) => console.error(err)); 
-  }
-  const deleteHandle = () => {
-    axios
-      .delete("http://jsonplaceholder.typicode.com/todos/1")
-      .then((res) => console.log(res.data))
-      .catch((err) => console.error(err));
-  }
+const [inputCity, setInputCity] = useState("");
+const [data, setData] = useState({});
+
+const getWetherDetails = (cityName) => {
+  
+ 
+  axios
+    .get(
+      "https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=e4b2c3bd2f677e854d83635398fe3a76"
+    )
+    .then((res) => {
+      console.log("response", res.data);
+      setData(res.data);
+    })
+    .catch((err) => {
+      console.log("err", err);
+    });
+    
+};
+
+const handleInput = (e) => {
+  console.log("value", e.target.value);
+  setInputCity(e.target.value);
+};
+
+const handleSearch = () => {
+  getWetherDetails(inputCity);
+};
+
+
+ 
+
+  
+  
   
   return (
     <>
-      <Button color="primary" onClick={getHandle}>
-        get
+      <TextField id="standard-basic"  variant="standard"  value={inputCity} onChange={handleInput}/>
+      <Button color="primary" onClick={handleSearch}>
+        Search
       </Button>
-      <Button color="secondary" onClick={postHandle}>
-        post
-      </Button>
-      <Button color="primary" onClick={putHandle}>
-        put
-      </Button>
-      <Button color="secondary" onClick={patchHandle}>
-        patch
-      </Button>
-      <Button color="primary" onClick={deleteHandle}>
-        delete
-      </Button>
+      <Typography variant="h3" component="div" gutterBottom>
+        {data.name}
+      </Typography>
+      <Typography variant="h4" component="div" gutterBottom>
+        {((data?.main?.temp) - 273.15).toFixed(2)}°C
+      </Typography>
      
     </>
   );
