@@ -4,7 +4,7 @@ const Image = () => {
   return (
     <div className="image-container">
       <img
-        src="https://www.cihi.ca/sites/default/files/image/physicians-in-canada-2020-en-prod-pg.svg"
+        src="https://mustasfaa.com/wp-content/uploads/2021/06/Banner_2.jpg"
         className="image"
         alt="Medical"
       />
