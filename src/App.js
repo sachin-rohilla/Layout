@@ -1,10 +1,10 @@
-import Axios from "./Components/Axios";
+import Layout from "./Components/Layout";
 
 
 const App = () => {
   return (
     <>
-    <Axios/>
+    <Layout/>
     </>
   );
 };
