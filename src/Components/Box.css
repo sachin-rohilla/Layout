@@ -1,4 +1,13 @@
 .box{
-width: 100px;
-height: 200px;
+
+    background-color:#778BA3;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    
+}
+.box-para{
+padding: 30px;
+font-family: serif;
 }

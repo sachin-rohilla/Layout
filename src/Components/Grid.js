@@ -14,13 +14,12 @@ const Grid = () => {
       </div>
       <div className="main-grid">
         <div className="grid1">blue</div>
-        <div className="grid2">green</div>
+        <div className="grid2">Baby</div>
         <div className="grid1">blue</div>
         <div className="grid2">green</div>
         <div className="grid1">blue</div>
         <div className="grid2">green</div>
       </div>
-      <h1>hello</h1>
     </>
   );
 }
