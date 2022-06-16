@@ -4,6 +4,9 @@ import FormFillUp from "./FormFillUp";
 import Stats from"./Stats"
 import Grid from "./Grid"
 import Box from "./Box"
+import Profile from "./Profile"
+import Description from"./Description"
+import Footer from "./Footer"
 const Layout = () => {
   return (
     <>
@@ -13,6 +16,9 @@ const Layout = () => {
       <Stats/>
       <Grid/>
       <Box/>
+      <Profile/>
+      <Description/>
+      <Footer/>
     </>
   );
 };
