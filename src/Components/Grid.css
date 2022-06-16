@@ -11,19 +11,27 @@
 .grid1{
     
     margin-left: 10px;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
-     border: 1px solid black;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+     /* border: 1px solid black; */
      
     border-radius: 10px;
 
+}
+.fa-ambulance,.fa-heartbeat,.fa-wheelchair,.fa-user-md,.fa-stethoscope,.fa-hospital-o,.fa-inr,.fa-hand-stop-o,.fa-chain-broken,.fa-refresh,.fa-venus-double,.fa-pie-chart{
+    font-size: 40px;
+    padding: 10px 20px;
+}
+.icon{
+    padding: 5px 5px;
+    font-size: 12px;
 }
 .grid2{
 
     margin-left: 10px;
     /* border: none; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 10px;
-box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
 
 }
 .grid-heading{

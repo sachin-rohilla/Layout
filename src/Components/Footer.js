@@ -1,14 +1,18 @@
-import React from 'react'
-import './Footer.css'
+import React from "react";
+import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
       <img
-        src="https://media.istockphoto.com/vectors/healthcare-hospital-and-medical-diagnostics-concept-web-banner-with-vector-id1198043030"
+        src="https://mustasfaa.com/wp-content/uploads/2021/06/Banner_1.jpg"
         alt=""
+        width="1300px"
       />
+      <div className="footer-des">
+        <p>@CopytRight</p>
+      </div>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;

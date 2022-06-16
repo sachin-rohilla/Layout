@@ -1,9 +1,9 @@
-import React from 'react'
-import "./Stats.css"
+import React from "react";
+import "./Stats.css";
 const Stats = () => {
   return (
     <div className="stats-container">
-      <p className='stats-para'>
+      <p className="stats-para">
         The primary function of a paragraph as a unit of meaning is
         organizational. If all writing is communication, then the text is the
         total meaning of this communication. It is impossible to impart this
@@ -19,6 +19,6 @@ const Stats = () => {
       </p>
     </div>
   );
-}
+};
 
-export default Stats
+export default Stats;
